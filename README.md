@@ -194,7 +194,7 @@ Best of luck for your *Hackathon!* 🏆
 
 <p align="center">
   <a href="https://github.com/syedjalees" target="_blank">
-    <img src="https://img.shields.io/badge/Made%20by-SAYYED%20JALEES-blue?style=for-the-badge&logo=github" />
+    <img src="https://img.shields.io/badge/Made%20by-Nazia%20Imran-blue?style=for-the-badge&logo=github" />
   </a>
 </p>
 
