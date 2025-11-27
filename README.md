@@ -1,67 +1,52 @@
-# 🚀 Free Claude Code Setup With Google Gemini
+🚀 Free Claude Code Setup With Google Gemini
 
-A complete & beginner-friendly guide to install, configure, and run *Claude Code + Gemini API Router* on Windows.
+A complete & beginner-friendly guide to install, configure, and run Claude Code + Gemini API Router on Windows.
 
----
-*Just Follow the Steps*
+✅ Step 1 — Generate FREE Google Gemini API Key
 
-## ✅ Step 1 — Generate FREE Google Gemini API Key
+Go to Google AI Studio → https://aistudio.google.com
 
-1. Go to *Google AI Studio* → [https://aistudio.google.com](https://aistudio.google.com)
-2. Click on *“Get API Key”*
-3. Click *“Create API Key”*
-4. Name your Key & Project
-5. Create the Key
-6. Save it for configuration
-7. For now move to Step 2
+Click on “Get API Key”
 
----
+Click “Create API Key”
 
-## ✅ Step 2 — Install Claude Code + Routing Modules
+Name your Key & Project
 
-Open *PowerShell as Administrator*, then:
+Create the key
 
-* Check Node version:
+Save it for configuration
 
-sh
+Move to Step 2
+
+✅ Step 2 — Install Claude Code + Routing Modules
+
+Open PowerShell as Administrator, then check your Node version:
+
 node -v
 
 
-Version *20 or above* → ✔ OK
+If version is 20 or above, continue.
+If not, download the latest Node: https://nodejs.org
 
-If error or older version → download latest Node: [https://nodejs.org](https://nodejs.org)
+Install Claude Code + Router:
 
-Now install Claude Code + Router:
-
-sh
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
 
-
----
-
-## ✅ Step 3 — Create Required Folders
-
-Run these commands in PowerShell:
-
-sh
+✅ Step 3 — Create Required Folders
 mkdir $HOME/.claude-code-router
 mkdir $HOME/.claude
 
+✅ Step 4 — Create config.json
 
----
+⚠ Windows PowerShell does not support EOF blocks, so use Notepad.
 
-## ✅ Step 4 — Create config.json
+Open config file:
 
-> ⚠ *The EOF commands only works in Linux and Mac Shells doesn't work in Windows, that is why using Notepad is recommended* → use Notepad.
-
-Just Run this command to make notepad
-sh
 notepad $HOME/.claude-code-router/config.json
 
 
-Paste the following JSON, and **replace $GOOGLE_API_KEY with your actual API key**:
+Paste this JSON (replace $GOOGLE_API_KEY with your real key):
 
-json
 {
   "LOG": true,
   "LOG_LEVEL": "info",
@@ -92,110 +77,63 @@ json
 }
 
 
-✅Save → Close Notepad.
+Save & close.
 
----
-
-## ✅ Step 5 — Set Your Gemini API Key as Environment Variable
-
-Run this command with *your actual API key*:
-
-sh
+✅ Step 5 — Set Your Gemini API Key as Environment Variable
 [System.Environment]::SetEnvironmentVariable('GOOGLE_API_KEY', 'YOUR_API_KEY_HERE', 'User')
 
 
 Example:
 
-sh
 [System.Environment]::SetEnvironmentVariable('GOOGLE_API_KEY', 'AIzaSy.............', 'User')
 
 
-Close PowerShell → reopen it.
+Restart PowerShell → verify:
 
-Verify:
-
-sh
 echo $env:GOOGLE_API_KEY
 
-
-If it shows your key → ✔ Continue.
-
----
-
-## ✅ Step 6 — Verify Installation
-
-Run one-by-one:
-
-sh
+✅ Step 6 — Verify Installation
 claude --version
 ccr version
 echo $env:GOOGLE_API_KEY
 
 
-If everything responds → ✔ Good to go.
+If all commands respond correctly → ✔ Setup is good.
 
----
-
-## ✅ Step 7 — Daily Workflow (How to Use It)
-
-### *Window 1 — Start Router Server*
-
-sh
+✅ Step 7 — Daily Workflow (How to Use)
+Window 1 — Start Router Server
 ccr start
 
 
 If you see:
 
-
 ⚠ API key is not set. HOST is forced to 127.0.0.1.
 Loaded JSON config from: C:\Users\Admin\.claude-code-router\config.json
 
 
-This means everything is working fine.
+This is normal. Keep this window open.
 
-*Keep this window open.*
-
----
-
-### *Window 2 — Start Claude Code*
+Window 2 — Start Claude Code
 
 Go to your project folder:
 
-sh
 cd your-project-folder
 
 
-Start AI coding environment:
+Start the coding environment:
 
-sh
 ccr code
 
+✅ Step 8 — Test the AI
 
----
-
-## ✅ Step 8 — Test the AI
-
-Inside the prompt box type:
-
+Type:
 
 hi
 
 
-If it replies →
-🎉 *Congratulations! You have successfully set up Claude Code with your Gemini API key!*
+If it replies → 🎉 Setup Successful!
 
-Best of luck for your *Hackathon!* 🏆
+Best of luck for your Hackathon! 🏆
 
----
-
----
-
-#  Made with 💝 by Nazia Imran
-
-<p align="center">
-  <a href="https://github.com/syedjalees" target="_blank">
-    <img src="https://img.shields.io/badge/Made%20by-Nazia%20Imran-blue?style=for-the-badge&logo=github" />
-  </a>
-</p>
-
----
+Made with 💝 by Nazia Imran
+<p align="center"> <a href="https://github.com/syedjalees" target="_blank"> <img src="https://img.shields.io/badge/Made%20by-Nazia%20Imran-blue?style=for-the-badge&logo=github" /> </a> </p>
